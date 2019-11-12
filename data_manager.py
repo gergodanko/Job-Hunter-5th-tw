@@ -9,12 +9,12 @@ def import_data(filename='albums_data.txt'):
     
     return table
 
-def export_data(albums, filename='albums_data.txt', mode='a'):
+def export_data(lst, filename, mode='a'):
     
     if mode!="w" and mode!="a":
         raise ValueError("Wrong write mode")
     
     with open(filename, mode) as file_handle:
-        for record in albums:
-            row = ','.join(record)
-            file_handle.write(row + "\n")
+        
+            #row = ''.join(record)
+        file_handle.write(",".join(lst)+ "\n")

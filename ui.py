@@ -1,3 +1,5 @@
+import random
+
 def print_table(table,title_list):
     sizes=[]
     sum_of_sizes=0
@@ -61,7 +63,7 @@ def print_error_message(message):
     print("An error occured!\n Error: "+message)
 
 def generate_random(table):
-    
+
     valid_id = False
     while valid_id==False:
         generated = ''
