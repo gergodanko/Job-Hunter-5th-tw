@@ -59,3 +59,38 @@ def get_inputs(list_labels, title):
 
 def print_error_message(message):
     print("An error occured!\n Error: "+message)
+
+def generate_random(table):
+    
+    valid_id = False
+    while valid_id==False:
+        generated = ''
+
+        sequence=''
+        list_of_chars = ['1','1','2','2','3','3','4','4',]
+        while len(list_of_chars)>0:
+            
+            s= (random.randrange(0,len(list_of_chars)))
+            a=''.join(list_of_chars[s])
+            sequence += a
+            list_of_chars.pop(s)
+
+        
+        random_id=""
+        for i in range(len(sequence)):
+            if sequence[i] == '1':
+                
+                random_id += str(random.randrange(0,10))
+            elif sequence[i] == '2':
+                random_id += chr(random.randrange(65,91))
+            elif sequence[i] == '3':
+                random_id += chr(random.randrange(97,123))
+            else:
+                random_id += chr(random.randrange(33,48))
+    
+        if random_id not in table:
+            generated=random_id
+            valid_id=True
+
+
+    return generated
