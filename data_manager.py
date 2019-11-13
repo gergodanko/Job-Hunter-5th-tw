@@ -1,8 +1,8 @@
 def import_data(filename='albums_data.txt'):
     
     with open(filename, "r") as file_handle:
-        lines = file_handle.readlines()
-    table=[]
+        lines = file_handle.readlines() 
+    table=[]    
     for i in range(len(lines)):
         table.append([])
     table = [item.replace("\n", "").split(",") for item in lines]
