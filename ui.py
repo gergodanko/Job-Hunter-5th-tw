@@ -88,7 +88,7 @@ def generate_random(table):
             elif sequence[i] == '3':
                 random_id += chr(random.randrange(97,123))
             else:
-                random_id += chr(random.randrange(33,48))
+                random_id += chr(random.randrange(33,43))
     
         if random_id not in table:
             generated=random_id
